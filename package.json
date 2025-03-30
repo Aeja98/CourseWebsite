@@ -1,0 +1,23 @@
+{
+  "name": "typescript1",
+  "version": "1.0.0",
+  "main": "index.js",
+  "source": [
+    "index.html"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "watch": "tsc --watch",
+    "scss": "sass --watch src/styles:dist/styles",
+    "start": "npm run build && lite-server"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "lite-server": "^2.6.1",
+    "sass": "^1.86.0",
+    "typescript": "^5.8.2"
+  }
+}

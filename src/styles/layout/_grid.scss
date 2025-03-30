@@ -1,0 +1,87 @@
+body {
+ display: grid;
+ grid-template-columns: 1fr;
+ grid-template-rows: 1fr 5fr 2fr 1fr;
+}
+
+nav {
+    grid-column: 1;
+    grid-row: 1;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(1fr 4em);
+
+    h1 {
+        grid-column: 1;
+        grid-row: 1;
+    }
+    .menu {
+        grid-column: 1;
+        grid-row: 2;
+    }
+}
+#kursLista {
+    grid-column: 1;
+    grid-row: 2;
+}
+
+#läggTill {
+    grid-column: 1;
+    grid-row: 3;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(6 1fr);
+    h3 {grid-row: 1; grid-column: 1/3;}
+    #in1 {
+        grid-row: 2;
+        grid-column: 1;
+    }
+    #code {
+        grid-row: 2;
+        grid-column: 2;
+    }
+    #in2 {
+        grid-row: 3;
+        grid-column: 1;
+    }
+    #name {
+        grid-row: 3;
+        grid-column: 2;
+    }
+    #in3 {
+        grid-row: 4;
+        grid-column: 1;
+    }
+    #progression {
+        grid-row: 4;
+        grid-column: 2;
+    }
+    #in4 {
+        grid-row: 5;
+        grid-column: 1;
+    }
+    #syllabus {
+        grid-row: 5;
+        grid-column: 2;
+    }
+    #submitBtn {
+        grid-row: 6;
+        grid-column: 1;
+    }
+    #resetBtn {
+        grid-row: 6;
+        grid-column: 2;
+    }
+
+}
+
+
+footer {
+    grid-column: 1;
+    grid-row: 4;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 1fr;
+    #footLeft {grid-row: 1; grid-column: 1;}
+    #footRight {grid-row: 1; grid-column: 2;}
+}

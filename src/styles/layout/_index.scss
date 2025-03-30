@@ -1,0 +1,171 @@
+//Color scheme
+$bodyBackground: #83a590;
+$bodyFont: #002119;
+
+$navFootBackground: #ffffd3;
+
+$link: #075586;
+$linkBackground: #bdffe6;
+$linkHover: #095336;
+$linkFontHover: #bdffe6;
+
+$TsectionBackground: #ffdcc2;
+$tableBorder: #2f3c38;
+$thBackground: #bdffe6;
+$tdBackground: #ffebdc;
+$tblFont: #000000;
+
+$Fsection: #d0f7d0;
+$FBtnBackground: #7fb57f;
+$FBtnHover: #2f6140;
+
+
+//Fonts
+@font-face {
+    font-family: 'Gabriela';
+     src: url(Font/Gabriela/Gabriela-Regular.ttf);
+}
+@font-face {
+     font-family: 'Raleway';
+     src: url(Font/Raleway/Raleway-Regular.ttf);
+}
+
+body {
+    background-color: $bodyBackground;
+    color: $bodyFont;
+}
+nav {
+    background-color: $navFootBackground;
+    font-family: Gabriela, serif;
+    h1 {
+        padding: 0.5em 1em 0 1em;
+    }
+    .menu {
+        margin-bottom: 1em;
+        place-self: center;
+        a {
+            color: $link;
+            background-color: $linkBackground;
+            border: solid thin black;
+            border-radius: 30px;
+            float: center;
+            text-align: center;
+            padding: 0.7em;
+            font-size: 0.7em;
+            margin: 0.2em;
+            text-underline-offset: 5%;
+            overflow: hidden;
+        }
+        a:hover {
+            background-color: $linkHover;
+            color: $linkFontHover;
+            font-size: 0.8em;
+            transition: 0.4s ease;
+            border: none;
+        }
+    }
+}
+
+#kursLista {
+    margin: 1em 0;
+    background-color: $TsectionBackground;
+    h2 {
+        text-align: center;
+        font-family: Raleway, sans-serif;
+    }
+
+    table {
+        padding: 0 1em;
+        border-spacing: 4px;
+        #head, th {
+            background-color: $thBackground;
+            color: $tblFont;
+            font-family: Gabriela, serif;
+            border: 2px solid $tableBorder;
+            text-align: center;
+            padding: 0.7em;
+        }
+        td {
+            font-family: Raleway, sans-serif;
+            background-color: $tdBackground;
+            color: $tblFont;
+            border: 2px solid $tableBorder;
+            padding: 0.5em;
+        }
+    }
+}
+
+#läggTill {
+    margin-bottom: 1em;
+    background-color: $Fsection;
+    padding: 1em 1.5em 0 1.5em;
+    h3 {
+        font-family: Gabriela, serif;
+    }
+    label {
+        font-family: Raleway, sans-serif;
+        align-self: center;
+        padding: 2%;
+    }
+    input {
+        margin: 0.3em;
+        padding: 2%;
+        align-self: center;
+        border: solid 1px black;
+        background-color: white;
+    }
+    input::placeholder{
+        font-family: Raleway, sans-serif;
+    }
+    input:focus {
+        outline: solid thin black;
+        background-color: #ffffffd9;
+    }
+    input:focus::placeholder{color: #cbcbcb;}
+    button {
+        margin: 2em 2em 0 0.5em;
+        padding: 0.4em 0;
+        place-self: center;
+        width: 45%;
+        height: 30px;
+        background-color: $FBtnBackground;
+        border: solid thin black;
+        border-radius: 10px;
+        color: black;
+        font-family: Gabriela, serif;
+        cursor: pointer;
+
+    }
+    button:hover {
+        background-color: $FBtnHover;
+        color: white;
+        transition: 0.4s ease;
+    }
+}
+
+footer {
+    font-family: Raleway, sans-serif;
+    background-color: $navFootBackground;
+    padding: 1em 1.5em;
+    font-size: 0.8em;
+    #footLeft {
+        h4 {font-family: Gabriela, serif;}
+        padding-left: 11px;
+        #copyright{font-size: 0.7em;}
+        align-content: center;
+        p {padding-left: 20px;}
+    }
+    #footRight {
+        padding-right: 40px;
+        text-align: end;
+        align-content: center;
+        ul {
+            list-style: none;
+            padding-right: 20px;
+        }
+        li a {
+            color: $link;
+            font-size: 0.9em;
+        }
+    }
+}
