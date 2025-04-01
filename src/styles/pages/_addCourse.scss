@@ -1,0 +1,49 @@
+@use "abstracts/variables";
+
+#courseForm {
+    margin: 1em 0;
+    background-color: variables.$Fsection;
+    padding: 1em 1.5em 0 1.5em;
+    h3 {
+        font-family: Gabriela, serif;
+    }
+    label {
+        font-family: Raleway, sans-serif;
+        align-self: center;
+        padding: 2%;
+    }
+    input {
+        margin: 0.3em;
+        padding: 2%;
+        align-self: center;
+        border: solid 1px black;
+        background-color: white;
+    }
+    input::placeholder{
+        font-family: Raleway, sans-serif;
+    }
+    input:focus {
+        outline: solid thin black;
+        background-color: #ffffffd9;
+    }
+    input:focus::placeholder{color: #cbcbcb;}
+    button {
+        margin: 2em 2em 0 0.5em;
+        padding: 0.4em 0;
+        place-self: center;
+        width: 45%;
+        height: 30px;
+        background-color: variables.$FBtnBackground;
+        border: solid thin black;
+        border-radius: 10px;
+        color: black;
+        font-family: Gabriela, serif;
+        cursor: pointer;
+
+    }
+    button:hover {
+        background-color: variables.$FBtnHover;
+        color: white;
+        transition: 0.4s ease;
+    }
+}

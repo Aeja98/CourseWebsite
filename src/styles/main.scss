@@ -1,3 +1,11 @@
-@use "layout/index";
+
+@use 'abstracts/variables';
+
+@use 'base/mediaQueries';
+@use 'base/reset';
+
+@use "layout/navAndFooter";
 @use "layout/grid";
-@use "layout/mediaQueries";
+
+@use 'pages/addCourse';
+@use 'pages/index';

@@ -1,0 +1,30 @@
+//Color scheme
+$bodyBackground: #83a590;
+$bodyFont: #002119;
+
+$navFootBackground: #ffffd3;
+
+$link: #075586;
+$linkBackground: #bdffe6;
+$linkHover: #095336;
+$linkFontHover: #bdffe6;
+
+$TsectionBackground: #ffdcc2;
+$tableBorder: #2f3c38;
+$thBackground: #bdffe6;
+$tdBackground: #ffebdc;
+$tblFont: #000000;
+
+$Fsection: #d0f7d0;
+$FBtnBackground: #7fb57f;
+$FBtnHover: #2f6140;
+
+//Fonts
+@font-face {
+    font-family: 'Gabriela';
+     src: url(Font/Gabriela/Gabriela-Regular.ttf);
+}
+@font-face {
+     font-family: 'Raleway';
+     src: url(Font/Raleway/Raleway-Regular.ttf);
+}

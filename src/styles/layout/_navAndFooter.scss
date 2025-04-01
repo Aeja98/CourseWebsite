@@ -1,0 +1,61 @@
+@use "abstracts/variables";
+
+
+nav {
+    background-color: variables.$navFootBackground;
+    font-family: Gabriela, serif;
+    h1 {
+        padding: 0.5em 1em 0 1em;
+    }
+    .menu {
+        margin-bottom: 1em;
+        place-self: center;
+        a {
+            color: variables.$link;
+            background-color: variables.$linkBackground;
+            border: solid thin black;
+            border-radius: 30px;
+            float: center;
+            text-align: center;
+            padding: 0.7em;
+            font-size: 0.7em;
+            margin: 0.2em;
+            text-underline-offset: 5%;
+            overflow: hidden;
+        }
+        a:hover {
+            background-color: variables.$linkHover;
+            color: variables.$linkFontHover;
+            font-size: 0.8em;
+            transition: 0.4s ease;
+            border: none;
+        }
+    }
+}
+
+footer {
+    font-family: Raleway, sans-serif;
+    background-color: variables.$navFootBackground;
+    padding: 1em 1.5em;
+    font-size: 0.8em;
+    #footLeft {
+        h4 {font-family: Gabriela, serif;}
+        padding-left: 11px;
+        #copyright{font-size: 0.7em;}
+        align-content: center;
+        p {padding-left: 20px;}
+    }
+    #footRight {
+        padding-right: 40px;
+        text-align: end;
+        align-content: center;
+        ul {
+            list-style: none;
+            padding-right: 20px;
+        }
+        li a {
+            color: variables.$link;
+            font-size: 0.9em;
+        }
+    }
+}

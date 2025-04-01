@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="se">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href= "styles/main.css"/>
+    <script type="module" src="index.js"></script>
+    <title>Lägg till kurs</title>
+</head>
+<body class="addCourse">
+
+  <nav>
+      <h1>Webbutveckling</h1> 
+      <div class="menu">
+        <a href="index.html">Startsida</a>
+        <a href="#">Sida 2</a>
+    </div>
+  </nav>
+
+  <form id="courseForm">
+    <h3>Lägg till kurs</h3>
+
+    <label id="in1" for="code">Kurskod</label>
+    <input type="text" id="code" required placeholder="Kurskod">
+
+    <br>
+
+    <label id="in2" for="name">Kursnamn</label>
+    <input type="text" id="name" required placeholder="Kursnamn">
+
+    <br>
+
+    <label id="in3" for="progression">Progression</label>
+    <input type="text" id="progression" required placeholder="Progression (A, B eller C)">
+
+    <br>
+
+    <label id="in4" for="syllabus">Kursplan</label>
+    <input type="url" id="syllabus" placeholder="URL till kursplan">
+
+    <br>
+
+    <button id="submitBtn" type="submit">Spara</button>
+    <button id="resetBtn" type="reset">Återställ</button>
+
+  </form>
+
+  <footer>
+    <span id="footLeft">
+      <h4>Angelica Adolfsson</h4>
+      <p>
+        Tel: 000 1234567
+        <br>
+        Email: anad2400@student.miun.se
+
+      </p>
+      <p id="copyright">copyright &copy 2025</p>
+    </span>
+    <span id="footRight">
+      <p>Quick Links:</p>
+      <ul>
+        <li><a href="index.html">Startsida</a></li>
+        <li><a href="#">Sida 2</a></li>
+      </ul>
+    </span>
+
+  </footer>
+</body>
+</html>

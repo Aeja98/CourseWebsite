@@ -1,3 +1,63 @@
+/*
+Index page:
+  page laod => fetch course from database
+    display in table
+
+Add course page:
+  display form to input course detials
+    on submit => validate -> send data -> update database
+    *optionally => show success/failure feedback*
+*/
+
+/*
+Index Page
+
+const courseList = document.querySelector("#CourseTbl");
+
+fetch("http://localhost:3000/api/courses")
+  .then((res) => res.json())
+  .then((courses) => {
+    courses.forEach((course) => {
+      const li = document.createElement("li");
+      li.textContent = `${course.title} – ${course.instructor}`;
+      courseList?.appendChild(li);
+    });
+  });
+*/
+
+/*
+addCourse Page:
+const form = document.querySelector("form") as HTMLFormElement;
+
+form.addEventListener("submit", async (e) => {
+  e.preventDefault();
+
+  const course = {
+    title: (document.querySelector("#title") as HTMLInputElement).value,
+    instructor: (document.querySelector("#instructor") as HTMLInputElement).value,
+    // etc...
+  };
+
+  try {
+    const res = await fetch("http://localhost:3000/api/courses", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(course),
+    });
+
+    if (res.ok) {
+      alert("Course added!");
+      form.reset();
+    } else {
+      alert("Failed to add course.");
+    }
+  } catch (err) {
+    console.error("Error:", err);
+  }
+});
+*/
+
+/*
 // Interface för användare
 interface User {
     name: string;
@@ -43,3 +103,4 @@ interface User {
     printUserDetails(newUser);
   });
   //  
+  */

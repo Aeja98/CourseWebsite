@@ -1,0 +1,35 @@
+@use "abstracts/variables";
+
+body {
+    background-color: variables.$bodyBackground;
+    color: variables.$bodyFont;
+}
+
+#CourseTbl {
+    margin: 1em 0;
+    background-color: variables.$TsectionBackground;
+    h2 {
+        text-align: center;
+        font-family: Raleway, sans-serif;
+    }
+
+    table {
+        padding: 0 1em;
+        border-spacing: 4px;
+        #head, th {
+            background-color: variables.$thBackground;
+            color: variables.$tblFont;
+            font-family: Gabriela, serif;
+            border: 2px solid variables.$tableBorder;
+            text-align: center;
+            padding: 0.7em;
+        }
+        td {
+            font-family: Raleway, sans-serif;
+            background-color: variables.$tdBackground;
+            color: variables.$tblFont;
+            border: 2px solid variables.$tableBorder;
+            padding: 0.5em;
+        }
+    }
+}

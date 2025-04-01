@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "main": "index.js",
   "source": [
-    "index.html"
+    "index.html",
+    "addCourse.html"
   ],
   "scripts": {
     "build": "tsc",

@@ -8,18 +8,17 @@
     <script type="module" src="index.js"></script>
     <title>Index</title>
 </head>
-<body>
+<body class="index">
 
   <nav>
       <h1>Webbutveckling</h1> 
       <div class="menu">
-        <a href="#">Sida 1</a>
+        <a href="addCourse.html">Lägg till kurs</a>
         <a href="#">Sida 2</a>
-        <a href="#">Sida 3</a>
     </div>
   </nav>
 
-  <div id="kursLista">
+  <div id="CourseTbl">
     <h2>Kurser</h2>
       <table>
         <tr id="head">
@@ -35,42 +34,8 @@
           <td>optio, quibusdam perferendis unde voluptatum dolorem! Mollitia, suscipit.</td>
         </tr>
       </table>
-<!-- 
-  Webbplats:
-  
-  Skapa webbplats som visar en lista över kurser & möjlighet att lägga till nya kurser
-  Använd DOM-manipulation för att uppdatera webbsidan när kurser lagts till.
-  Använd enkel validering för att kontrollera att kurskoden är unik, och att kursens progression är korrekt.
--->
+      
   </div>
-
-  <form id="läggTill">
-    <h3>Lägg till kurs</h3>
-
-    <label id="in1" for="code">Kurskod</label>
-    <input type="text" id="code" required placeholder="Kurskod">
-
-    <br>
-
-    <label id="in2" for="name">Kursnamn</label>
-    <input type="text" id="name" required placeholder="Kursnamn">
-
-    <br>
-
-    <label id="in3" for="progression">Progression</label>
-    <input type="text" id="progression" required placeholder="Progression (A, B eller C)">
-
-    <br>
-
-    <label id="in4" for="syllabus">Kursplan</label>
-    <input type="url" id="syllabus" placeholder="URL till kursplan">
-
-    <br>
-
-    <button id="submitBtn" type="submit">Spara</button>
-    <button id="resetBtn" type="reset">Återställ</button>
-
-  </form>
 
   <footer>
     <span id="footLeft">
@@ -86,9 +51,8 @@
     <span id="footRight">
       <p>Quick Links:</p>
       <ul>
-        <li><a href="#">Sida 1</a></li>
+        <li><a href="addCourse.html">Lägg till kurs</a></li>
         <li><a href="#">Sida 2</a></li>
-        <li><a href="#">Sida 3</a></li>
       </ul>
     </span>
 
