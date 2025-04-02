@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href= "styles/main.css"/>
-    <script type="module" src="index.js"></script>
+    <script type="module" src="scripts/index.js"></script>
     <title>Index</title>
 </head>
 <body class="index">
@@ -18,23 +18,20 @@
     </div>
   </nav>
 
-  <div id="CourseTbl">
+  <div class="CourseTbl">
     <h2>Kurser</h2>
       <table>
-        <tr id="head">
+        <tr class="head">
           <th>Kurskod</th>
           <th>Kursnamn</th>
           <th>Progression</th>
           <th>Kursplan</th>
-        </tr>
-        <tr>
-          <td>Lorem ipsum dolor sit amet consectetur</td>
-          <td>adipisicing elit. Quasi ipsa expedita amet accusantium saepe</td>
-          <td>illum doloribus, incidunt voluptatibus obcaecati architecto modi </td>
-          <td>optio, quibusdam perferendis unde voluptatum dolorem! Mollitia, suscipit.</td>
+          <th>Radera</th>
         </tr>
       </table>
       
+      <button class="restoreBtn">Visa raderade kurser</button>
+
   </div>
 
   <footer>
@@ -57,5 +54,7 @@
     </span>
 
   </footer>
+  
+  <script type="module" src="scripts/index.js"></script>
 </body>
 </html>

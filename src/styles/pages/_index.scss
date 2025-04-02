@@ -1,22 +1,27 @@
-@use "abstracts/variables";
+@use "../abstracts/variables";
 
 body {
     background-color: variables.$bodyBackground;
     color: variables.$bodyFont;
 }
 
-#CourseTbl {
-    margin: 1em 0;
+.CourseTbl {
     background-color: variables.$TsectionBackground;
+    padding: 0 2em 1em 2em;
     h2 {
         text-align: center;
         font-family: Raleway, sans-serif;
+        padding-top: 1em;
     }
 
     table {
-        padding: 0 1em;
-        border-spacing: 4px;
-        #head, th {
+        margin: auto;
+        width: 100%;
+        padding: 0 0.5em;
+        border-spacing: 0.3em;
+        text-align: center;
+        .head, th {
+            place-self: center;
             background-color: variables.$thBackground;
             color: variables.$tblFont;
             font-family: Gabriela, serif;
@@ -24,12 +29,44 @@ body {
             text-align: center;
             padding: 0.7em;
         }
-        td {
-            font-family: Raleway, sans-serif;
-            background-color: variables.$tdBackground;
-            color: variables.$tblFont;
-            border: 2px solid variables.$tableBorder;
-            padding: 0.5em;
+        .row {
+            td {
+                font-family: Raleway, sans-serif;
+                background-color: variables.$tdBackground;
+                color: variables.$tblFont;
+                border: 2px solid variables.$tableBorder;
+                padding: 0.5em;
+                font-size: 0.8em;
+            }
+          }
+        .delete-btn {
+            border: solid thin variables.$tableBorder;
+            background-color: variables.$thBackground;
+            padding: 3%;
+            border-radius: 3px;
+            cursor: pointer;
         }
+        .delete-btn:hover, .delete-btn:active {
+            background-color: darken(variables.$thBackground, 7);
+            box-shadow: 2px 2px #e6ac7fc7;
+            transition: 0.3s ease;
+        }
+    }
+    .restoreBtn {
+        text-align: center;
+        place-self: center;
+        padding: 0.7em;
+        width: max-content;
+        height: max-content;
+        background-color: variables.$thBackground;
+        border: solid thin variables.$tableBorder;
+        border-radius: 10px;
+        color: black;
+        font-family: Gabriela, serif;
+        cursor: pointer;
+    }
+    .restoreBtn:hover {
+        background-color: darken(variables.$thBackground, 10);
+        transition: 0.3s;
     }
 }

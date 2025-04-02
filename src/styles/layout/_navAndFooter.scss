@@ -1,7 +1,9 @@
-@use "abstracts/variables";
+@use "../abstracts/variables";
 
 
 nav {
+    padding: 1em;
+    padding-bottom: 0;
     background-color: variables.$navFootBackground;
     font-family: Gabriela, serif;
     h1 {
