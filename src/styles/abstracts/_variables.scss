@@ -9,15 +9,23 @@ $linkBackground: #bdffe6;
 $linkHover: #095336;
 $linkFontHover: #bdffe6;
 
-$TsectionBackground: #ffdcc2;
+//Table section color scheme
+$TsectionBackground: #ffe1c4;
 $tableBorder: #2f3c38;
 $thBackground: #bdffe6;
-$tdBackground: #ffebdc;
+$tdBackground: #ffecdb;
 $tblFont: #000000;
 
+//Formula section color scheme
 $Fsection: #d0f7d0;
 $FBtnBackground: #7fb57f;
 $FBtnHover: #2f6140;
+
+//About section color scheme
+$Asection: #89c6ffbb;
+$subSectionBak: #b6feee;
+
+
 
 //Fonts
 @font-face {

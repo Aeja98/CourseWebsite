@@ -1,0 +1,48 @@
+@use "../abstracts/variables";
+
+
+.aboutSection {
+    background-color: variables.$Asection;
+    padding: 0.5em;
+    h2 {
+        font-family: Gabriela, serif;
+        font-size: 1.2em;
+        align-content: center;
+    }
+    #syfte, #info, #slutsatser {
+        background-color: variables.$subSectionBak;
+        border-radius: 15px;
+        padding: 0.5em 1em;
+    }
+    #syfte, #slutsatser {margin-bottom: 0.5em;}
+    h3 {
+        font-family: Raleway, sans-serif;
+        font-size: 0.9em;
+        margin-bottom: 3%;
+        padding-left: 0.3em;
+        border-bottom: 1px solid black;
+    }
+    p {
+        font-family: Raleway, sans-serif;
+        padding: 0 0.3em;
+        font-size: 0.7em;
+    }
+}
+
+@media only screen and (min-width: 600px){
+    .aboutSection{
+        padding: 1em;
+        h2{font-size: 1.5em;}
+        h3 {font-size: 1.1em;}
+        p{font-size: 1em;}
+    }
+}
+
+@media only screen and (min-width: 1000px){
+    .aboutSection{
+        padding: 1em;
+        h2{font-size: 1.6em;}
+        h3{font-size: 1.3em;}
+        p {font-size: 1em;}
+    }
+}

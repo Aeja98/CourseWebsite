@@ -2,20 +2,22 @@
 
 .courseForm {
     background-color: variables.$Fsection;
-    padding: 1em 1.5em 0 1.5em;
-    h3 {
+    padding: 0.5em 1em;
+    h2 {
         font-family: Gabriela, serif;
-        padding: 1em 0;
+        font-size: 1.2em;
+        align-content: center;
     }
     label {
         font-family: Raleway, sans-serif;
+        font-size: 0.9em;
         align-self: center;
-        padding: 1em 2em;
+        padding-left: 1em;
         text-decoration: underline;
     }
     input {
-        margin: 0.3em;
-        height: 2.5em;        
+        font-size: 0.9em;
+        height: 2em;        
         align-self: center;
         border: solid 1px black;
         background-color: white;
@@ -23,29 +25,65 @@
     }
     input::placeholder{
         font-family: Raleway, sans-serif;
+        font-size: 0.8em;
     }
     input:focus {
-        outline: solid thin black;
+        outline: solid 1px black;
         background-color: #ffffffd9;
     }
     input:focus::placeholder{color: #cbcbcb;}
     button {
-        margin: 2em 2em 0 0.5em;
-        padding: 0.4em 0;
+        margin: 0.7em;
         place-self: center;
-        width: 12em;
-        height: 2.5em;
+        width: 9em;
+        height: 2em;
         background-color: variables.$FBtnBackground;
         border: solid thin black;
-        border-radius: 8px;
+        border-radius: 10px;
         color: black;
+        font-size: 0.75em;
         font-family: Gabriela, serif;
         cursor: pointer;
-
     }
     button:hover {
         background-color: variables.$FBtnHover;
         color: white;
         transition: 0.3s ease;
+    }
+}
+
+@media only screen and (min-width: 600px){
+    .courseForm{
+        padding: 0.5em 1.5em;
+        h2 {font-size: 1.5em;}
+        //Labels
+        #in1, #in2, #in3, #in4 {
+            padding: 1.6em 1em;
+            font-size: 1.2em;
+        }
+
+        //inputs
+        #code, #name, #syllabus, #progression {
+            font-size: 1.2em;
+            width: 80%;
+            height: 2.5em;
+            justify-self: center;
+        }
+
+        #submitBtn, #resetBtn {
+            width: 60%;
+            height: 45%;
+            font-size: 1em;
+            border-radius: 20px;
+        }
+    }
+}
+
+@media only screen and (min-width: 1000px){
+    .courseForm{
+        h2{font-size: 1.6em;}
+        #in1, #in2, #in3, #in4 {font-size: 1.3em;}
+        #code, #name, #syllabus, #progression{font-size: 1.6em; height: 60%;}
+        #submitBtn, #resetBtn {font-size: 1.2em; height: 50%;}
     }
 }

@@ -5,34 +5,37 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href= "styles/main.css"/>
-    <script type="module" src="scripts/index.js"></script>
-    <title>Index</title>
+    <script type="module" src="scripts/addCourse.js"></script>
+    <title>Lägg till kurs</title>
 </head>
-<body class="index">
+<body class="aboutBod">
 
   <nav>
       <h1>Webbutveckling</h1> 
       <div class="menu">
+        <a href="index.html">Startsida</a>
         <a href="addCourse.html">Lägg till kurs</a>
-        <a href="about.html">About</a>
     </div>
   </nav>
 
-  <div class="CourseTbl">
-    <h2>Kurser</h2>
-      <table>
-        <tr class="head">
-          <th>Kurskod</th>
-          <th>Kursnamn</th>
-          <th>Progression</th>
-          <th>Kursplan</th>
-          <th>Radera</th>
-        </tr>
-      </table>
-      
-      <button class="restoreBtn">Visa raderade kurser</button>
+  <section class="aboutSection">
+    <h2>Om Webbplatsen</h2>
 
-  </div>
+    <div id="syfte">
+        <h3>Syfte:</h3>
+        <p>Beskriv webbplatsens syfte</p>
+    </div>
+
+    <div id="info">
+        <h3>Information:</h3>
+        <p>Information om vilken databas-server som använts</p>
+    </div>
+
+    <div id="slutsatser">
+        <h3>Slutsatser:</h3>
+        <p>Slutsatser jag dragit av uppgiften</p>
+    </div>
+  </section>
 
   <footer>
     <span id="footLeft">
@@ -48,13 +51,12 @@
     <span id="footRight">
       <p>Quick Links:</p>
       <ul>
+        <li><a href="index.html">Startsida</a></li>
         <li><a href="addCourse.html">Lägg till kurs</a></li>
-        <li><a href="about.html">About</a></li>
       </ul>
     </span>
 
   </footer>
   
-  <script type="module" src="scripts/index.js"></script>
 </body>
 </html>

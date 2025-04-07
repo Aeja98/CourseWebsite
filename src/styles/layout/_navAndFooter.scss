@@ -2,35 +2,35 @@
 
 
 nav {
-    padding: 1em;
+    padding-top: 0.7em;
     padding-bottom: 0;
     background-color: variables.$navFootBackground;
     font-family: Gabriela, serif;
     h1 {
         padding: 0.5em 1em 0 1em;
+        font-size: 1.3em;
     }
     .menu {
-        margin-bottom: 1em;
         place-self: center;
         a {
             color: variables.$link;
-            background-color: variables.$linkBackground;
-            border: solid thin black;
+            background-color: variables.$thBackground;
+            border: solid thin variables.$tableBorder;
             border-radius: 30px;
             float: center;
             text-align: center;
             padding: 0.7em;
-            font-size: 0.7em;
+            font-size: 0.6em;
             margin: 0.2em;
             text-underline-offset: 5%;
             overflow: hidden;
         }
         a:hover {
-            background-color: variables.$linkHover;
-            color: variables.$linkFontHover;
+            background-color: variables.$link;
+            color: white;
             font-size: 0.8em;
             transition: 0.4s ease;
-            border: none;
+            border: white solid 1px;
         }
     }
 }
@@ -38,26 +38,60 @@ nav {
 footer {
     font-family: Raleway, sans-serif;
     background-color: variables.$navFootBackground;
-    padding: 1em 1.5em;
-    font-size: 0.8em;
+    padding: 0.5em 1em;
+    font-size: 0.7em;
     #footLeft {
-        h4 {font-family: Gabriela, serif;}
-        padding-left: 11px;
-        #copyright{font-size: 0.7em;}
+        h4 {
+            font-family: Gabriela, serif;
+            margin-bottom: 2%;
+        }
+        #copyright{font-size: 0.7em; margin-top: 2%;}
         align-content: center;
-        p {padding-left: 20px;}
+        p {padding-left: 10px;}
     }
     #footRight {
-        padding-right: 40px;
+        padding-right: 10px;
         text-align: end;
         align-content: center;
         ul {
             list-style: none;
-            padding-right: 20px;
         }
         li a {
             color: variables.$link;
             font-size: 0.9em;
         }
+    }
+}
+@media only screen and (min-width: 600px){
+    nav {
+        padding: 1em 0.5em 0 0.5em;
+        h1{
+            font-size: 1.7em;
+        }
+        .menu a {font-size: 0.9em;}
+        .menu a:hover {font-size: 1.1em;}
+    }
+    footer {
+        padding: 1em 2em;
+        font-size: 1em;
+        p{font-size: 0.9em;}
+        ul {font-size: 1em;}
+    }
+}
+
+@media only screen and (min-width: 1000px){
+    nav {
+        padding: 1.5em 1em;
+        h1{
+            font-size: 2em;
+        }
+        .menu a {font-size: 1.1em; padding: 0.7em 1em;}
+        .menu a:hover {font-size: 1.3em;}
+    }
+    footer {
+        padding: 1em 2em;
+        font-size: 1.2em;
+        p{font-size: 1em;}
+        ul {font-size: 0.9em;}
     }
 }

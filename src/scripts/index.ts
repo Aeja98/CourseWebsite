@@ -32,7 +32,7 @@ fetch("http://localhost:3000/api/courses")
         <td>${course.coursename}</td>
         <td>${course.progression}</td>
         <td><a href="${course.syllabus}" target="_blank">Syllabus</a></td>
-        <td><button class="delete-btn" data-id="${course.id}">❌</button></td>
+        <td><button class="delete-btn" data-id="${course.id}">X</button></td>
       `;
       courseTable.appendChild(row);
     });

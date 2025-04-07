@@ -7,17 +7,16 @@ body {
 
 .CourseTbl {
     background-color: variables.$TsectionBackground;
-    padding: 0 2em 1em 2em;
+    padding-top: 0.5em;
     h2 {
         text-align: center;
-        font-family: Raleway, sans-serif;
-        padding-top: 1em;
+        font-family: Gabriela, serif;
+        font-size: 1.2em;
+        place-self: center;
     }
 
     table {
-        margin: auto;
         width: 100%;
-        padding: 0 0.5em;
         border-spacing: 0.3em;
         text-align: center;
         .head, th {
@@ -27,46 +26,104 @@ body {
             font-family: Gabriela, serif;
             border: 2px solid variables.$tableBorder;
             text-align: center;
-            padding: 0.7em;
+            padding: 0.5em;
+            font-size: 0.8em;
         }
-        .row {
-            td {
-                font-family: Raleway, sans-serif;
-                background-color: variables.$tdBackground;
-                color: variables.$tblFont;
-                border: 2px solid variables.$tableBorder;
-                padding: 0.5em;
-                font-size: 0.8em;
-            }
-          }
+        .row td {
+            font-family: Raleway, sans-serif;
+            background-color: variables.$tdBackground;
+            color: variables.$tblFont;
+            border: 2px solid variables.$tableBorder;
+            padding: 0.5em;
+            font-size: 0.6em;
+        }
+        a {
+            color: variables.$link;
+            text-underline-offset: 5%;
+        }
+        a:hover {
+            color: variables.$linkHover;
+            transition: 0.3s ease;
+        }
         .delete-btn {
             border: solid thin variables.$tableBorder;
             background-color: variables.$thBackground;
-            padding: 3%;
+            color: variables.$link;
+            font-size: 1.1em;
+            width: 1.8em;
+            height: 1.8em;
+            font-weight: 600;
             border-radius: 3px;
             cursor: pointer;
         }
         .delete-btn:hover, .delete-btn:active {
-            background-color: darken(variables.$thBackground, 7);
-            box-shadow: 2px 2px #e6ac7fc7;
+            background-color: variables.$link;
+            box-shadow: 3px 3px 5px #f7b586e6;
+            color: white;
+            border: white solid 1px;
             transition: 0.3s ease;
         }
     }
     .restoreBtn {
         text-align: center;
         place-self: center;
-        padding: 0.7em;
+        padding: 0.6em;
         width: max-content;
         height: max-content;
         background-color: variables.$thBackground;
+        color: variables.$link;
         border: solid thin variables.$tableBorder;
         border-radius: 10px;
-        color: black;
         font-family: Gabriela, serif;
+        font-size: 0.7em;
         cursor: pointer;
+        margin-bottom: 0.5em;
     }
     .restoreBtn:hover {
-        background-color: darken(variables.$thBackground, 10);
+        background-color: variables.$link;
+        color: white;
+        border: white solid 1px;
         transition: 0.3s;
+    }
+}
+
+@media only screen and (min-width: 600px){
+    .CourseTbl{
+        padding: 1em 2em;
+        h2 {font-size: 1.5em;}
+        table {
+            .head, th {
+                font-size: 1em;
+                padding: 0.7em;
+            }
+            .row td {
+                font-size: 0.9em;
+                padding: 0.7em;
+            }
+            .delete-btn {
+                width: 2em;
+                height: 2em;
+            }         
+        }
+        .restoreBtn {
+            font-size: 0.9em;
+            padding: 0.8em 1em;
+            border-radius: 20px;
+        }
+    }
+}
+
+@media only screen and (min-width: 1000px){
+    .CourseTbl{
+        h2{font-size: 1.8em;}
+        table{
+            .head, th {font-size: 1.2em;}
+            .row td {font-size: 1.1em; padding: 0.7em;}
+            .delete-btn {width: 2.3em; height: 2.3em; border: solid 0.1em;}
+        }
+        .restoreBtn {
+            font-size: 1.2em;
+            border: 0.1em solid;
+        }
     }
 }
