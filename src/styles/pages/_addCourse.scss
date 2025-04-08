@@ -20,7 +20,7 @@
         height: 2em;        
         align-self: center;
         border: solid 1px black;
-        background-color: white;
+        background-color: #f3fef3;
         padding: 1%;
     }
     input::placeholder{
@@ -29,7 +29,7 @@
     }
     input:focus {
         outline: solid 1px black;
-        background-color: #ffffffd9;
+        background-color: #ffffff;
     }
     input:focus::placeholder{color: #cbcbcb;}
     button {
@@ -48,25 +48,29 @@
     button:hover {
         background-color: variables.$FBtnHover;
         color: white;
+        filter: drop-shadow(#629862dc 4px 3px 3px);
         transition: 0.3s ease;
     }
 }
 
 @media only screen and (min-width: 600px){
     .courseForm{
+        margin: 0 2em;
+        border-radius: 15px;
         padding: 0.5em 1.5em;
-        h2 {font-size: 1.5em;}
+        h2 {font-size: 1.5em; margin: 1em 0 0.5em 1.2em;}
         //Labels
         #in1, #in2, #in3, #in4 {
             padding: 1.6em 1em;
             font-size: 1.2em;
+            margin-left: 2em;
         }
 
         //inputs
         #code, #name, #syllabus, #progression {
             font-size: 1.2em;
-            width: 80%;
-            height: 2.5em;
+            width: 70%;
+            height: 50%;
             justify-self: center;
         }
 
@@ -81,9 +85,10 @@
 
 @media only screen and (min-width: 1000px){
     .courseForm{
-        h2{font-size: 1.6em;}
+        margin: 0 2.5em;
+        h2{font-size: 1.6em; margin: 1em 0 0.5em 1.5em;}
         #in1, #in2, #in3, #in4 {font-size: 1.3em;}
-        #code, #name, #syllabus, #progression{font-size: 1.6em; height: 60%;}
-        #submitBtn, #resetBtn {font-size: 1.2em; height: 50%;}
+        #code, #name, #syllabus, #progression{font-size: 1.6em; height: 50%;}
+        #submitBtn, #resetBtn {font-size: 1.2em; height: 50%; width: 45%;}
     }
 }

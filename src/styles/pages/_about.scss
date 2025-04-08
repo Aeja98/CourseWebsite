@@ -12,20 +12,29 @@
     #syfte, #info, #slutsatser {
         background-color: variables.$subSectionBak;
         border-radius: 15px;
-        padding: 0.5em 1em;
+        padding: 0.7em 1em;
     }
-    #syfte, #slutsatser {margin-bottom: 0.5em;}
     h3 {
         font-family: Raleway, sans-serif;
         font-size: 0.9em;
-        margin-bottom: 3%;
+        margin: 0.5em 0 1em 0.2em;
         padding-left: 0.3em;
         border-bottom: 1px solid black;
     }
     p {
         font-family: Raleway, sans-serif;
-        padding: 0 0.3em;
+        padding: 0 1em;
         font-size: 0.7em;
+    }
+    ul {
+        list-style: none; 
+        padding: 0 1em;
+        font-family: Raleway, sans-serif;
+        margin-bottom: 1.5em;
+        font-size: 0.7em;
+    }
+    li {
+        margin: 0.5em 0;
     }
 }
 
@@ -34,7 +43,8 @@
         padding: 1em;
         h2{font-size: 1.5em;}
         h3 {font-size: 1.1em;}
-        p{font-size: 1em;}
+        p {font-size: 1em;}
+        ul{font-size: 1em;}
     }
 }
 
