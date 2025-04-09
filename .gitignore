@@ -1,11 +1,5 @@
 #node_modules
 /node_modules/
 
-#kompilerad js
-/dist/scripts/
-
-# kompilerad css
-/dist/styles/
-
 #env fil -> innehåller inlogg lösenord
 .env
