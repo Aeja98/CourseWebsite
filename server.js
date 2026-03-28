@@ -19,10 +19,13 @@ const db = mysql.createConnection({
   user: process.env.DB_USER,
   password: process.env.DB_PASSWORD,
   database: process.env.DB_NAME,
-  ssl: {
-    rejectUnauthorized: false,
-  }
 });
+
+if (process.env.NODE_ENV === "production") {
+  dbConfig.ssl = {
+    rejectUnauthorized: false
+  };
+}
 
 //connect to database - or return error mess
 db.connect((err) => {
