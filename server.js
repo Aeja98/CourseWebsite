@@ -40,6 +40,10 @@ db.connect((err) => {
   console.log("Connected to MySQL database.");
 });
 
+app.get("/", (req, res) => {
+  res.sendFile(path.join(__dirname, "dist", "index.html"));
+});
+
 //Get all courses
 app.get("/api/courses", (req, res) => {
   //filters rows + shows courses that havent been deleted
@@ -59,11 +63,6 @@ app.get("/api/courses/deleted", (req, res) => {
   });
 });
 
-//Start server
-app.listen(port, () => {
-  console.log(`Server is running at http://localhost:${port}`);
-});
-
 //Delete course
 app.put("/api/courses/restore", (req, res) => {
   //resets all deleted courses 
@@ -73,3 +72,9 @@ app.put("/api/courses/restore", (req, res) => {
     res.json({ message: "All deleted courses restored" });
   });
 });
+
+//Start server
+app.listen(port, "0.0.0.0", () => {
+  console.log(`Server is running on port ${port}`);
+});
+
