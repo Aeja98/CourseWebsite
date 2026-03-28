@@ -3,6 +3,10 @@
 const express = require("express");
 const mysql = require("mysql2");
 const cors = require("cors");
+const path = require("path");
+
+//Hämta variabler
+require("dotenv").config();
 
 const app = express();
 const port = 3000;
@@ -10,8 +14,8 @@ const port = 3000;
 app.use(cors());
 app.use(express.json());
 
-//Hämta variabler
-require("dotenv").config();
+// Serve static frontend files from dist
+app.use(express.static(path.join(__dirname, "dist")));
 
 //Access database
 const db = mysql.createConnection({
