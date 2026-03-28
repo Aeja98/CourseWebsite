@@ -8,7 +8,8 @@
     "watch": "tsc --watch",
     "scss": "sass --watch src/styles:dist/styles",
     "dev": "nodemon server.js",
-    "frontend": "lite-server"
+    "frontend": "lite-server",
+    "start": "node server.js"
   },
   "keywords": [],
   "author": "Angelica Adolfsson",
