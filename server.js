@@ -26,7 +26,7 @@ const db = mysql.createConnection({
 });
 
 if (process.env.NODE_ENV === "production") {
-  dbConfig.ssl = {
+  ssl = {
     rejectUnauthorized: false
   };
 }
