@@ -50,9 +50,8 @@ body {
             background-color: variables.$thBackground;
             color: variables.$link;
             font-size: 1.1em;
-            width: 1.8em;
-            height: 1.8em;
             font-weight: 600;
+            padding: 1em;
             border-radius: 3px;
             cursor: pointer;
         }
@@ -63,27 +62,6 @@ body {
             border: white solid 1px;
             transition: 0.3s ease;
         }
-    }
-    .restoreBtn {
-        text-align: center;
-        place-self: center;
-        padding: 0.6em;
-        width: max-content;
-        height: max-content;
-        background-color: variables.$thBackground;
-        color: variables.$link;
-        border: solid thin variables.$tableBorder;
-        border-radius: 10px;
-        font-family: Gabriela, serif;
-        font-size: 0.7em;
-        cursor: pointer;
-        margin-bottom: 0.5em;
-    }
-    .restoreBtn:hover {
-        background-color: variables.$link;
-        color: white;
-        border: white solid 1px;
-        transition: 0.3s;
     }
 }
 
@@ -99,16 +77,7 @@ body {
             .row td {
                 font-size: 0.9em;
                 padding: 0.7em;
-            }
-            .delete-btn {
-                width: 2em;
-                height: 2em;
             }         
-        }
-        .restoreBtn {
-            font-size: 0.9em;
-            padding: 0.8em 1em;
-            border-radius: 20px;
         }
     }
 }
@@ -119,11 +88,7 @@ body {
         table{
             .head, th {font-size: 1.2em;}
             .row td {font-size: 1.1em; padding: 0.7em;}
-            .delete-btn {width: 2.3em; height: 2.3em; border: solid 0.1em;}
-        }
-        .restoreBtn {
-            font-size: 1.2em;
-            border: 0.1em solid;
+            .delete-btn {border: solid 0.1em;}
         }
     }
 }
