@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles/main.css">
+    <title><%= title %></title>
+</head>
+<body class="index">
+
+  <nav>
+      <h1>Webbutveckling</h1> 
+      <div class="menu">
+        <a href="/addcourse">Lägg till kurs</a>
+        <a href="/about">Om sidan</a>
+      </div>
+  </nav>
+
+  <div class="CourseTbl">
+    <h2>Kurser</h2>
+
+    <table>
+      <thead>
+        <tr class="head">
+          <th>Kurskod</th>
+          <th>Kursnamn</th>
+          <th>Progression</th>
+          <th>Kursplan</th>
+          <th>Radera</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% if (courses.length === 0) { %>
+          <tr>
+            <td colspan="5">Inga kurser finns lagrade ännu.</td>
+          </tr>
+        <% } %>
+
+        <% courses.forEach(course => { %>
+          <tr>
+            <td><%= course.coursecode %></td>
+            <td><%= course.coursename %></td>
+            <td><%= course.progression %></td>
+            <td>
+              <a href="<%= course.syllabus %>" target="_blank" rel="noopener noreferrer">Kursplan</a>
+            </td>
+            <td>
+              <form action="/delete/<%= course.id %>" method="POST">
+                <button type="submit">Radera</button>
+              </form>
+            </td>
+          </tr>
+        <% }) %>
+      </tbody>
+    </table>
+  </div>
+
+  <footer>
+    <span id="footLeft">
+      <h4>Angelica Adolfsson</h4>
+      <p>
+        Email: anad2400@student.miun.se
+      </p>
+      <p id="copyright">copyright &copy; 2026</p>
+    </span>
+
+    <span id="footRight">
+      <p>Quick Links:</p>
+      <ul>
+        <li><a href="/addcourse">Lägg till kurs</a></li>
+        <li><a href="/about">Om sidan</a></li>
+      </ul>
+    </span>
+  </footer>
+
+</body>
+</html>

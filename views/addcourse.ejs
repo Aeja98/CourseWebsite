@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles/main.css">
+    <title><%= title %></title>
+</head>
+<body class="addCourse">
+
+  <nav>
+      <h1>Webbutveckling</h1> 
+      <div class="menu">
+        <a href="/">Startsida</a>
+        <a href="/about">Om sidan</a>
+      </div>
+  </nav>
+
+  <form class="courseForm" action="/addcourse" method="POST">
+    <h2>Lägg till kurs</h2>
+
+    <% if (error) { %>
+      <p class="error"><%= error %></p>
+    <% } %>
+
+    <label id="in1" for="code">Kurskod</label>
+    <input
+      type="text"
+      id="code"
+      name="coursecode"
+      placeholder="Kurskod"
+      value="<%= formData.coursecode || '' %>"
+      required
+    >
+
+    <br>
+
+    <label id="in2" for="name">Kursnamn</label>
+    <input
+      type="text"
+      id="name"
+      name="coursename"
+      placeholder="Kursnamn"
+      value="<%= formData.coursename || '' %>"
+      required
+    >
+
+    <br>
+
+    <label id="in3" for="progression">Progression</label>
+    <input
+      type="text"
+      id="progression"
+      name="progression"
+      placeholder="Progression (A, B eller C)"
+      value="<%= formData.progression || '' %>"
+      required
+    >
+
+    <br>
+
+    <label id="in4" for="syllabus">Kursplan</label>
+    <input
+      type="url"
+      id="syllabus"
+      name="syllabus"
+      placeholder="URL till kursplan"
+      value="<%= formData.syllabus || '' %>"
+      required
+    >
+
+    <br>
+
+    <button id="submitBtn" type="submit">Spara</button>
+    <button id="resetBtn" type="reset">Återställ</button>
+  </form>
+
+  <footer>
+    <span id="footLeft">
+      <h4>Angelica Adolfsson</h4>
+      <p>
+        Email: anad2400@student.miun.se
+      </p>
+      <p id="copyright">copyright &copy; 2026</p>
+    </span>
+
+    <span id="footRight">
+      <p>Quick Links:</p>
+      <ul>
+        <li><a href="/">Startsida</a></li>
+        <li><a href="/about">Om sidan</a></li>
+      </ul>
+    </span>
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,38 @@
+//Color scheme
+$bodyBackground: #83a590;
+$bodyFont: #002119;
+
+$navFootBackground: #ffffd3;
+
+$link: #075586;
+$linkBackground: #bdffe6;
+$linkHover: #095336;
+$linkFontHover: #bdffe6;
+
+//Table section color scheme
+$TsectionBackground: #ffe1c4;
+$tableBorder: #2f3c38;
+$thBackground: #bdffe6;
+$tdBackground: #ffecdb;
+$tblFont: #000000;
+
+//Formula section color scheme
+$Fsection: #d0f7d0;
+$FBtnBackground: #7fb57f;
+$FBtnHover: #2f6140;
+
+//About section color scheme
+$Asection: #89c6ffbb;
+$subSectionBak: #b6feee;
+
+
+
+//Fonts
+@font-face {
+     font-family: 'Gabriela';
+     src: url('/font/Gabriela/Gabriela-Regular.ttf') format('truetype');
+}
+@font-face {
+     font-family: 'Raleway';
+     src: url('/font/Raleway/Raleway-Regular.ttf') format('truetype');
+}

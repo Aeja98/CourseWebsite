@@ -1,0 +1,11 @@
+
+@use "abstracts/variables";
+
+@use 'base/reset';
+
+@use "layout/navAndFooter";
+@use "layout/grid";
+
+@use 'pages/index';
+@use 'pages/addCourse';
+@use 'pages/about';

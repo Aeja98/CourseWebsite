@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles/main.css">
+    <title>Om sidan</title>
+</head>
+<body class="aboutBod">
+
+  <nav>
+      <h1>Webbutveckling</h1> 
+      <div class="menu">
+        <a href="/">Startsida</a>
+        <a href="/addcourse">Lägg till kurs</a>
+      </div>
+  </nav>
+
+  <section class="aboutSection">
+    <h2>Om webbplatsen</h2>
+
+    <div id="syfte">
+      <h3>Syfte:</h3>
+      <p>
+        Webbplatsens syfte är att låta användare lagra och visa kurser de har läst.
+        Kursinformationen lagras i en relationsdatabas, där jag har valt att använda MySQL.
+      </p>
+
+      <p>Webbplatsen har tre sidor:</p>
+      <ul>
+        <li><b>Startsidan</b> visar alla lagrade kurser i en tabell tillsammans med en knapp för att radera en kurs.</li>
+        <li><b>Lägg till kurs</b> innehåller ett formulär där användaren kan lägga till nya kurser. Alla fält valideras på serversidan och måste fyllas i innan kursen kan sparas i databasen.</li>
+        <li><b>Om sidan</b> beskriver webbplatsens syfte, vilken databasserver som använts samt vilka slutsatser som dragits under arbetet.</li>
+      </ul>
+    </div>
+
+    <div id="info">
+      <h3>Information:</h3>
+      <p>
+        Databasservern som används i projektet är MySQL. Jag började med att skapa databasen och tabellen för kurser, och valde sedan lämpliga datatyper för varje fält.
+      </p>
+      <p>
+        Därefter lades kursinformation in i databasen så att webbplatsen redan från början kunde visa hur kurserna presenteras i tabellen.
+      </p>
+      <p>
+        Webbplatsen är byggd med Node.js och Express och använder EJS som view engine för server-rendering.
+      </p>
+    </div>
+
+    <div id="slutsatser">
+      <h3>Slutsatser:</h3>
+      <p>
+        Den här uppgiften och Moment 1 i Programmering i TypeScript kändes först ganska lika, vilket gjorde att jag ville försöka kombinera dem i samma webbsida.
+      </p>
+      <p>
+        Att försöka kombinera uppgifterna gjorde att vissa delar blev mer komplicerade än nödvändigt, eftersom kraven för kurserna inte var identiska. I efterhand hade det sannolikt varit enklare att arbeta med dem separat.
+      </p>
+      <p>
+        Jag är ändå nöjd med webbplatsens utseende och funktion, och jag har lärt mig mer om hur databaser kopplas ihop med en serverbaserad webbplats.
+      </p>
+      <p>
+        Något jag märkt att jag behöver öva mer på är att skapa och arbeta med databaser, samt att arbeta mer strukturerat med versionshantering i Git. Framöver vill jag bli bättre på att skapa repository direkt från början och göra tydligare commits regelbundet under arbetets gång.
+      </p>
+    </div>
+  </section>
+
+  <footer>
+    <span id="footLeft">
+      <h4>Angelica Adolfsson</h4>
+      <p>
+        Email: anad2400@student.miun.se
+      </p>
+      <p id="copyright">copyright &copy; 2026</p>
+    </span>
+
+    <span id="footRight">
+      <p>Quick Links:</p>
+      <ul>
+        <li><a href="/">Startsida</a></li>
+        <li><a href="/addcourse">Lägg till kurs</a></li>
+      </ul>
+    </span>
+  </footer>
+
+</body>
+</html>
