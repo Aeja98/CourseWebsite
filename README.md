@@ -29,7 +29,7 @@ Varje kurs innehåller följande information:
 
 - `coursecode` – kurskod
 - `coursename` – kursnamn
-- `progression` – progression (`A`, `B` eller `C`)
+- `progression` – progression
 - `syllabus` – länk till kursplan
 
 ## Att köra appen lokalt
