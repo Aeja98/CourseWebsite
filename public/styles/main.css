@@ -387,12 +387,10 @@ body {
   transition: 0.3s ease;
 }
 .CourseTbl table .delete-btn {
+  padding: 0.5em;
   border: solid thin #2f3c38;
   background-color: #bdffe6;
   color: #075586;
-  font-size: 1.1em;
-  font-weight: 600;
-  padding: 4em;
   border-radius: 3px;
   cursor: pointer;
 }
