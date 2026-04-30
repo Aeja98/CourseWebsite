@@ -1,57 +1,75 @@
-# Kurswebbsida 
+# Kurswebbsida
 
-En webbsida skapad för att användare ska kunna se kurser i Webbutveckling programmet med möjlighet att addera, radera, och återställa kurser.
+https://course-website-wox8.onrender.com/
 
-## Krav
-- Node.js 
+En serverbaserad webbplats där användaren kan lagra och visa kurser. Kurser sparas i en MySQL-databas och hämtas via en Express-server.
+
+## Funktioner
+
+- Visa en lista med kurser från databasen
+- Lägga till en ny kurs via formulär
+- Radera en kurs
+- Validera att alla fält är ifyllda (serverside)
+- Validera att progression är A, B eller C
+
+## Tekniker
+
+Projektet är byggt med:
+
+- Node.js
+- Express
+- EJS
 - MySQL
+- SCSS
+- HTML
 
-## Skapa databas 
-1. Skapa en databas som heter `courses`
-2. Använd följande tabellstruktur i MySQL:
+## Kursinformation
 
-```sql
-CREATE TABLE coursetable (
-  id INT NOT NULL AUTO_INCREMENT,
-  coursecode VARCHAR(10) NOT NULL,
-  coursename VARCHAR(50) NOT NULL,
-  progression VARCHAR(1) NOT NULL,
-  syllabus VARCHAR(100) NOT NULL,
-  deleted BOOLEAN DEFAULT false,
-  PRIMARY KEY (id)
-);
-```
+Varje kurs innehåller följande information:
 
-3. Skapa en `.env` fil med din MySQL användarnamn & lösenord.
+- `coursecode` – kurskod
+- `coursename` – kursnamn
+- `progression` – progression (`A`, `B` eller `C`)
+- `syllabus` – länk till kursplan
 
-## ER-Diagram 
-Visar tabellstrukturen samt fält för kursid, kursnamn, kursplan och progression tilsammans med id-kolumn vilket är primärnyckeln och en soft-delete markör som tar bort kursinfo från frontend sidan utan att radera det från servern/backend sidan.
+## Att köra appen lokalt
 
-
-![ER-Diagram](ER-Diagram.png)
-
-## Att köra appen 
-
-- `npm run dev` startar backend
-- `npm run frontend` startar frontend och startar webbsidan
-- `npm run scss` kompilerar scss till css
-
-
-Gå till [http://localhost:3002](http://localhost:3002) i din webbläsare.
-
+1. Installera dependencies:
+   `npm install`
+   
+2. Skapa en .env-fil med följande:
+- `DB_HOST= `
+- `DB_PORT= `
+- `DB_USER= `
+- `DB_PASSWORD= `
+- `DB_NAME= `
+  
+3. Starta servern:
+  `npm run dev`
+ 
+4. Öppna
+   http://localhost:3000
 
 ## Filstruktur
 ```
-projekt-root/
-├── dist/              # Kompilerade frontend HTML/CSS/JS
-├── src/               # Source TypeScript + SCSS
-├── server.js          # Express backend
-├── .env               # Dina databasuppgifter
-├── .env.example       # Exempel uppgifter
-├── bs-config.json
-├── ER-Diagram.png
-├── package-lock.json
+TypeScript1/
+├── public/
+│   ├── font/
+│   └── styles/
+│       └── main.css
+├── src/
+│   └── styles/
+│       ├── abstracts/
+│       ├── base/
+│       ├── layout/
+│       ├── pages/
+│       └── main.scss
+├── views/
+│   ├── about.ejs
+│   ├── addcourse.ejs
+│   └── index.ejs
+├── server.js
 ├── package.json
-├── tsconfig.json
+├── package-lock.json
+├── .env.example
 └── README.md
-```
