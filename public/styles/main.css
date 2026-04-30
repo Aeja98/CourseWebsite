@@ -391,9 +391,8 @@ body {
   background-color: #bdffe6;
   color: #075586;
   font-size: 1.1em;
-  width: 1.8em;
-  height: 1.8em;
   font-weight: 600;
+  padding: 4em;
   border-radius: 3px;
   cursor: pointer;
 }
@@ -403,27 +402,6 @@ body {
   color: white;
   border: white solid 1px;
   transition: 0.3s ease;
-}
-.CourseTbl .restoreBtn {
-  text-align: center;
-  place-self: center;
-  padding: 0.6em;
-  width: max-content;
-  height: max-content;
-  background-color: #bdffe6;
-  color: #075586;
-  border: solid thin #2f3c38;
-  border-radius: 10px;
-  font-family: Gabriela, serif;
-  font-size: 0.7em;
-  cursor: pointer;
-  margin-bottom: 0.5em;
-}
-.CourseTbl .restoreBtn:hover {
-  background-color: #075586;
-  color: white;
-  border: white solid 1px;
-  transition: 0.3s;
 }
 
 @media only screen and (min-width: 600px) {
@@ -441,15 +419,6 @@ body {
     font-size: 0.9em;
     padding: 0.7em;
   }
-  .CourseTbl table .delete-btn {
-    width: 2em;
-    height: 2em;
-  }
-  .CourseTbl .restoreBtn {
-    font-size: 0.9em;
-    padding: 0.8em 1em;
-    border-radius: 20px;
-  }
 }
 @media only screen and (min-width: 1000px) {
   .CourseTbl h2 {
@@ -463,13 +432,7 @@ body {
     padding: 0.7em;
   }
   .CourseTbl table .delete-btn {
-    width: 2.3em;
-    height: 2.3em;
     border: solid 0.1em;
-  }
-  .CourseTbl .restoreBtn {
-    font-size: 1.2em;
-    border: 0.1em solid;
   }
 }
 .courseForm {
