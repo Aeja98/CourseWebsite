@@ -38,7 +38,7 @@ db.connect((err) => {
 
 //Start page & show courses
 app.get("/", (req, res) => {
-  const sql = "SELECT * FROM coursetable WHERE deleted = false ORDER BY id DESC";
+  const sql = "SELECT * FROM coursetable WHERE deleted = false ORDER BY id ASC";
 
   db.query(sql, (err, results) => {
     if (err) {
